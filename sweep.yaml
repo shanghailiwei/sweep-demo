@@ -1,0 +1,7 @@
+# Sweep AI configuration file
+branch: main  # The branch to create PRs against
+description: A calculator library with automatic documentation and type hints
+draft: false  # Create draft PRs instead of normal PRs
+gha_enabled: True  # Enable GitHub Actions for Sweep
+model: gpt-4  # Use GPT-4 for better performance
+blocked_dirs: []  # No blocked directories
