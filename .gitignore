@@ -1,0 +1,9 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Codegen
+.codegen/.venv/
+.codegen/codegen-system-prompt.txt
+.codegen/prompts/

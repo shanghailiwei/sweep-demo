@@ -1,0 +1,6 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/.codegen/.venv/bin/python",
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}/.codegen/.venv/lib/python3.12/site-packages"
+  ]
+}
