@@ -1,0 +1,24 @@
+name: Sweep AI
+on:
+  issues:
+    types: [opened, edited, reopened]
+  issue_comment:
+    types: [created, edited]
+  pull_request:
+    types: [opened, synchronize, reopened]
+  pull_request_review:
+    types: [submitted]
+  pull_request_review_comment:
+    types: [created]
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    if: |
+      (github.event_name == 'issues' && contains(github.event.issue.title, 'Sweep:')) ||
+      (github.event_name == 'issue_comment' && contains(github.event.comment.body, 'Sweep:'))
+    steps:
+      - uses: actions/checkout@v3
+      - uses: sweepai/sweep@latest
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
